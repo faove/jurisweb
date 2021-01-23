@@ -1,0 +1,18 @@
+  <h2>Save User</h2>
+  <div>
+    <div class="mb-3">
+      <label for="NameText" class="form-label">User</label>
+      <input [(ngModel)]="users.name" type="text" class="form-control" id="NameText">
+    </div>
+    <div class="mb-3">
+      <label for="InputEmail" class="form-label">Email address</label>
+      <input [(ngModel)]="users.email" type="email" class="form-control" id="exampleInputEmail" aria-describedby="email">
+      <div id="emailHelp" class="form-text">Introduzca su correo</div>
+    </div>
+    <div class="mb-3">
+      <label for="EmailVerified" class="form-label">Email address verified</label>
+      <input [(ngModel)]="users.email_verified_at" type="email" class="form-control" id="EmailVerified" >
+      <div id="EmailVerified" class="form-text">Repita su correo</div>
+    </div>
+    <button  (click)="saveUser()" type="submit" class="btn btn-primary btn-block">Save</button>
+  </div>
