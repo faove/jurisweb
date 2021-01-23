@@ -1,9 +1,9 @@
 
   <hr>
-  <table class="table table-success table-striped">
-    <thead>
+  <table class="table">
+    <thead class="table-dark">
       <tr>
-        <th scope="col">id</th>
+        <th scope="col">Id</th>
         <th scope="col">Name</th>
         <th scope="col">Last Login</th>
         <th scope="col">Email</th>
@@ -12,11 +12,12 @@
     </thead>
     <tbody>
       <tr *ngFor="let user of users">
-        <td>{{ user.name }}</td>
+        <td>{{ user.id }}</td>
+        <th>{{ user.name }}</th>
         <td>{{ user.last_login }}</td>
         <td>{{ user.email }}</td>
-        <td><a class="btn btn-primary btn-sm" routerLink="/form">Edit</a>
-
+        <td><a class="btn btn-primary btn-sm" routerLink="/form/{{ user.id }}">Edit</a>
+          <a class="btn btn-primary btn-sm btn-danger" (click)=delete(user.id)>Delete</a>
         </td>
       </tr>
     </tbody>
