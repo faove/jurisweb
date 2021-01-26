@@ -1,7 +1,7 @@
 <form class="row g-3 needs-validation" novalidate>
     <div class="col-md-4">
-      <label for="validationCustom01" class="form-label">Client name</label>
-      <input type="text" class="form-control" id="validationCustom01"  required>
+      <label for="validationCustom01" class="form-label">Client Phone</label>
+      <input [(ngModel)]="service.phone_service" type="text" class="form-control" id="validationCustom01"  required>
       <div class="valid-feedback">
         Looks good!
       </div>
@@ -58,6 +58,6 @@
       </div>
     </div>
     <div class="col-12">
-      <button class="btn btn-primary" type="submit">Submit form</button>
+      <button  (click)="saveService()" type="submit" class="btn btn-primary btn-block">Save</button>
     </div>
   </form>

@@ -19,9 +19,11 @@ export class FormComponent implements OnInit {
     image: null,
     last_login: null
   };
+  
   id:any;
   editing:boolean=false;
   user_array: User[];
+
   constructor(private usersService: UsersService,private activatedRoute: ActivatedRoute) {
     this.id = this.activatedRoute.snapshot.params['id'];
     if (this.id){
