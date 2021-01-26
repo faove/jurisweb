@@ -4,6 +4,7 @@ import { HomeComponent } from './home/home.component';
 import { FormComponent } from './form/form.component';
 import { ServiceComponent } from './service/service.component';
 import { CategoryComponent } from './category/category.component';
+import { MattersComponent } from './matters/matters.component';
 import { FormsModule } from '@angular/forms';
 
 const routes: Routes = [
@@ -14,7 +15,9 @@ const routes: Routes = [
   {path: 'service', component: ServiceComponent},
   {path: 'service/:id', component: ServiceComponent},
   {path: 'category', component: CategoryComponent},
-  {path: 'category/:id', component: CategoryComponent}
+  {path: 'category/:id', component: CategoryComponent},
+  {path: 'matters', component: MattersComponent},
+  {path: 'matters/:id', component: MattersComponent}
 ];
 
 @NgModule({
